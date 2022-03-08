@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -18,35 +19,69 @@ import java.util.List;
 public class MainMenuController {
     private final XMLReader reader = new XMLReader();
     private List<Element> elementList = new ArrayList<>();
-    private SceneControl scene;
 
     @FXML
-    private HBox buttbox;
+    private GridPane itemPane;
     @FXML
-    private VBox vboxx;
+    private HBox buttonBox;
 
-    @FXML
     public void readFish(ActionEvent e) {
-//        try {
-//            scene.switchToItems();
-//        } catch (IOException ex) {
-//            ex.printStackTrace();
-//        }
         elementList = reader.getNodes("fishnchips");
-        List<Button> buttonlist = new ArrayList<>(); //our Collection to hold newly created Buttons
-            for (Element element : elementList) {
-                String name = element.getElementsByTagName("name").item(0).getTextContent();
-                buttonlist.add(new Button(name));
-            }
-            vboxx.getChildren().clear();
-//            buttbox.getChildren().clear();
-//            buttbox.getChildren().addAll(buttonlist);
+        ItemController fishnchips = new ItemController(elementList, buttonBox);
+        fishnchips.populateGrid(itemPane);
     }
 
     public void readCalzone(ActionEvent e){
         elementList = reader.getNodes("calzone");
+        ItemController calzone = new ItemController(elementList, buttonBox);
+        calzone.populateGrid(itemPane);
     }
 
+    public void readPizza(ActionEvent e){
+        elementList = reader.getNodes("pizza");
+        ItemController calzone = new ItemController(elementList, buttonBox);
+        calzone.populateGrid(itemPane);
+    }
+
+    public void readGB(ActionEvent e){
+        elementList = reader.getNodes("garlic_bread");
+        ItemController calzone = new ItemController(elementList, buttonBox);
+        calzone.populateGrid(itemPane);
+    }
+
+    public void readBurgers(ActionEvent e){
+        elementList = reader.getNodes("burgers");
+        ItemController calzone = new ItemController(elementList, buttonBox);
+        calzone.populateGrid(itemPane);
+    }
+
+    public void readKebabs(ActionEvent e){
+        elementList = reader.getNodes("kebabs");
+        ItemController calzone = new ItemController(elementList, buttonBox);
+        calzone.populateGrid(itemPane);
+    }
+
+    public void readSides(ActionEvent e){
+        elementList = reader.getNodes("sides");
+        ItemController calzone = new ItemController(elementList, buttonBox);
+        calzone.populateGrid(itemPane);
+    }
+
+    public void readDrinks(ActionEvent e){
+        elementList = reader.getNodes("drinks");
+        ItemController calzone = new ItemController(elementList, buttonBox);
+        calzone.populateGrid(itemPane);
+    }
+
+    public void readSpecials(ActionEvent e){
+        elementList = reader.getNodes("specials");
+        ItemController calzone = new ItemController(elementList, buttonBox);
+        calzone.populateGrid(itemPane);
+    }
+
+    public void backButton(ActionEvent e){
+
+    }
 
 }
 

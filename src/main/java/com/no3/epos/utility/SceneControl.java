@@ -22,9 +22,8 @@ public class SceneControl {
     public static void initialize() throws IOException {
         primaryStage = new Stage();
         primaryStage.setFullScreen(true);
-        primaryStage.setResizable(false);
+        //primaryStage.setResizable(false);
 
         mainMenuScene = new Scene(FXMLLoader.load(SceneControl.class.getResource("/fxml/MainMenu.fxml")));
-        mainMenuScene.setFill(Color.DARKGREY);
     }
 }

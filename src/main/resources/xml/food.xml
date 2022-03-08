@@ -17,6 +17,10 @@
             <name>Lemon &amp; Pepper Sole Goujons</name>
             <price>4.20</price>
         </item>
+        <item id="bbait">
+            <name>Blanchbait</name>
+            <price>3.50</price>
+        </item>
     </fishnchips>
     <calzone>
         <item id="2top">

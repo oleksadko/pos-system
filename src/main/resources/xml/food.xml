@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<shop>
+    <fishnchips>
+        <item id="lfish">
+            <name>Large Fish</name>
+            <price>5.50</price>
+        </item>
+        <item id="sfish">
+            <name>Small Fish</name>
+            <price>4.20</price>
+        </item>
+        <item id="crispgoujfish">
+            <name>Crispy Goujons Fish</name>
+            <price>4.20</price>
+        </item>
+        <item id="lmn_pep_gouj">
+            <name>Lemon &amp; Pepper Sole Goujons</name>
+            <price>4.20</price>
+        </item>
+    </fishnchips>
+    <calzone>
+        <item id="2top">
+            <name>2 Toppings</name>
+            <price>8.20</price>
+        </item>
+        <item id="3top">
+            <name>3 Toppings</name>
+            <price>9.00</price>
+        </item>
+        <item id="4top">
+            <name>4 Toppings</name>
+            <price>9.80</price>
+        </item>
+    </calzone>
+</shop>

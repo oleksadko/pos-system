@@ -21,6 +21,62 @@
             <name>Blanchbait</name>
             <price>3.50</price>
         </item>
+        <item id="fcake">
+            <name>Fish Cake</name>
+            <price>1.60</price>
+        </item>
+        <item id="scampi">
+            <name>Wholetail Scampi</name>
+            <price>4.00</price>
+        </item>
+        <item id="calamari">
+            <name>Battered Calamari</name>
+            <price>4.00</price>
+        </item>
+        <item id="chips">
+            <name>Regular Chips</name>
+            <price>2.20</price>
+        </item>
+        <item id="schip">
+            <name>Small Chips</name>
+            <price>1.70</price>
+        </item>
+        <item id="chipbarm">
+            <name>Chip Barm</name>
+            <price>2.50</price>
+        </item>
+        <item id="chipsnrice">
+            <name>Chips &amp; Rice</name>
+            <price>3.50</price>
+        </item>
+        <item id="cheesychips">
+            <name>Cheesy Chips</name>
+            <price>3.40</price>
+        </item>
+        <item id="pullporkchips">
+            <name>Pulled Pork Over Chips</name>
+            <price>4.80</price>
+        </item>
+        <item id="batburger">
+            <name>Battered Burger</name>
+            <price>3.30</price>
+        </item>
+        <item id="sausage">
+            <name>Sausage</name>
+            <price>1.60</price>
+        </item>
+        <item id="bsausage">
+            <name>Battered Sausage</name>
+            <price>1.90</price>
+        </item>
+        <item id="pie">
+            <name>pie1</name>
+            <price>3.00</price>
+        </item>
+        <item id="pie">
+            <name>pie2</name>
+            <price>3.00</price>
+        </item>
     </fishnchips>
     <calzone>
         <item id="2top">

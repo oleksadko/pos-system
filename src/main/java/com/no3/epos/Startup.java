@@ -2,6 +2,7 @@ package com.no3.epos;
 
 import com.no3.epos.utility.SceneControl;
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Startup extends Application {

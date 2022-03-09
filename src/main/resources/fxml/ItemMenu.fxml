@@ -2,24 +2,41 @@
 
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.no3.epos.menu.MainMenuController">
+<BorderPane fx:id="dynamicPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.no3.epos.menu.ItemController">
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox fx:id="buttbox" prefHeight="100.0" prefWidth="200.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0" />
-         </children>
-      </VBox>
+      <GridPane fx:id="itemPane" prefHeight="334.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
    </center>
    <right>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox prefHeight="480.0" prefWidth="218.0" style="-fx-border-color: transparent transparent transparent red; -fx-border-width: 3px;" />
-         </children>
-      </AnchorPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <VBox prefHeight="429.0" prefWidth="200.0" style="-fx-border-color: red;" />
+      </StackPane>
    </right>
+   <bottom>
+      <AnchorPane maxWidth="-Infinity" prefHeight="118.0" prefWidth="241.0" BorderPane.alignment="CENTER">
+         <HBox fx:id="buttonBox" layoutX="21.0" prefHeight="100.0" prefWidth="200.0" />
+      </AnchorPane>
+   </bottom>
 </BorderPane>

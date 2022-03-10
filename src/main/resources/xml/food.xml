@@ -69,15 +69,41 @@
             <name>Battered Sausage</name>
             <price>1.90</price>
         </item>
-        <item id="pie">
-            <name>pie1</name>
-            <price>3.00</price>
-        </item>
-        <item id="pie">
-            <name>pie2</name>
-            <price>3.00</price>
-        </item>
     </fishnchips>
+    <pie>
+        <item id="steak">
+            <name>Steak</name>
+            <price>3.00</price>
+        </item>
+        <item id="snk">
+            <name>Steak &amp; Kidney</name>
+            <price>3.00</price>
+        </item>
+        <item id="sna">
+            <name>Steak &amp; Ale</name>
+            <price>3.00</price>
+        </item>
+        <item id="sno">
+            <name>Steak &amp; Onion</name>
+            <price>3.00</price>
+        </item>
+        <item id="chickenmush">
+            <name>Chicken &amp; Mushroom</name>
+            <price>3.00</price>
+        </item>
+        <item id="cno">
+            <name>Cheese &amp; Onion</name>
+            <price>3.00</price>
+        </item>
+        <item id="meatpotato">
+            <name>Meat &amp; Potato</name>
+            <price>3.00</price>
+        </item>
+        <name id="veg">
+            <name>Vegetable</name>
+            <price>3.00</price>
+        </name>
+    </pie>
     <calzone>
         <item id="2top">
             <name>2 Toppings</name>
@@ -92,4 +118,10 @@
             <price>9.80</price>
         </item>
     </calzone>
+    <kebab>
+        <item id="kebab">
+            <name>kebab</name>
+            <price>1.00</price>
+        </item>
+    </kebab>
 </shop>

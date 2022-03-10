@@ -23,38 +23,43 @@ public class MainMenuController {
     private List<Element> elementList = new ArrayList<>();
 
     public void readButton(ActionEvent e) throws IOException {
-        ItemController items;
         switch(((Button)e.getSource()).getId()){
             case "fishBtn":
                 elementList = reader.getNodes("fishnchips");
-                System.out.println("fish");
                 break;
             case "calzoneBtn":
                 elementList = reader.getNodes("calzone");
-                System.out.println("calzone");
                 break;
             case "pizzaBtn":
+                elementList = reader.getNodes("pizza");
                 break;
             case "gbBtn":
+                elementList = reader.getNodes("gb");
                 break;
             case "burgerBtn":
+                elementList = reader.getNodes("burger");
                 break;
             case "kebabBtn":
+                elementList = reader.getNodes("kebab");
                 break;
             case "sideBtn":
+                elementList = reader.getNodes("side");
                 break;
             case "drinkBtn":
+                elementList = reader.getNodes("drink");
                 break;
             case "pieBtn":
+                elementList = reader.getNodes("pie");
                 break;
             case "specialBtn":
+                elementList = reader.getNodes("special");
                 break;
             default:
                 System.out.println("Default");
         }
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ItemMenu.fxml"));
         Parent root = loader.load();
-        items = loader.getController();
+        ItemController items = loader.getController();
         items.populateGrid(elementList);
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
@@ -63,59 +68,6 @@ public class MainMenuController {
         stage.show();
     }
 
-    public void readCalzone(ActionEvent e){
-        elementList = reader.getNodes("calzone");
-        ItemController calzone = new ItemController();
-        //calzone.populateGrid();
-    }
-
-    public void readPizza(ActionEvent e){
-        elementList = reader.getNodes("pizza");
-        ItemController calzone = new ItemController();
-        //calzone.populateGrid();
-    }
-
-    public void readGB(ActionEvent e){
-        elementList = reader.getNodes("garlic_bread");
-        ItemController calzone = new ItemController();
-        //calzone.populateGrid();
-    }
-
-    public void readBurgers(ActionEvent e){
-        elementList = reader.getNodes("burgers");
-        ItemController calzone = new ItemController();
-        //calzone.populateGrid();
-    }
-
-    public void readKebabs(ActionEvent e){
-        elementList = reader.getNodes("kebabs");
-        ItemController calzone = new ItemController();
-        //calzone.populateGrid();
-    }
-
-    public void readSides(ActionEvent e){
-        elementList = reader.getNodes("sides");
-        ItemController calzone = new ItemController();
-        //calzone.populateGrid();
-    }
-
-    public void readDrinks(ActionEvent e){
-        elementList = reader.getNodes("drinks");
-        ItemController calzone = new ItemController();
-        //calzone.populateGrid();
-    }
-
-    public void readSpecials(ActionEvent e){
-        elementList = reader.getNodes("specials");
-        ItemController calzone = new ItemController();
-        //calzone.populateGrid();
-    }
-
-    public void readPie(ActionEvent e){
-        elementList = reader.getNodes("pie");
-        ItemController pie = new ItemController();
-        //pie.populateGrid();
-    }
 
     public void backButton(ActionEvent e){
 

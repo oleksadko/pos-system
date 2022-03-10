@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -29,7 +30,7 @@ public class ItemController implements Initializable {
     @FXML
     private HBox buttonBox;
     @FXML
-    private BorderPane dynamicPane;
+    private VBox receiptBox;
 
     public ItemController(){}
 
@@ -51,17 +52,15 @@ public class ItemController implements Initializable {
                 }
             }
         });
-        try{
             for (Element element : elementList) {
                 String name = element.getElementsByTagName("name").item(0).getTextContent();
                 buttonlist.add(new Button(name));
             }
-        }catch (NullPointerException e){
-            System.out.println("empty");
-        }
         for (int i = 0; i < buttonlist.size(); i++) {
             buttonlist.get(i).setOnAction(event -> {
-                System.out.println(((Button)event.getSource()).getText());
+                Label item = new Label();
+                item.setText(((Button)event.getSource()).getText());
+                receiptBox.getChildren().add(item);
             });
             itemPane.setFillWidth(buttonlist.get(i), true);
             itemPane.setFillHeight(buttonlist.get(i), true);
@@ -75,5 +74,5 @@ public class ItemController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-}
+    }
 }

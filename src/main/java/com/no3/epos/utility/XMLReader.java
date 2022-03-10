@@ -32,13 +32,16 @@ public class XMLReader {
 
     public List<Element> getNodes(String tagName) {
         System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+        //get the category element, e.g. fishnchips, calzone...
         NodeList nodeList = doc.getElementsByTagName(tagName);
         List<Element> elements = new ArrayList<>();
         for (int itr = 0; itr < nodeList.getLength(); itr++) {
+            //select individual element
             Node categoryNode = nodeList.item(itr);
             System.out.println("\nNode Name: " + categoryNode.getNodeName());
             if (categoryNode.getNodeType() == Node.ELEMENT_NODE) {
                 NodeList itemNodeList = ((Element) categoryNode).getElementsByTagName("item");
+                //iterate through all elements named item and get its children
                 for (int itemitr = 0; itemitr < itemNodeList.getLength(); itemitr++) {
                     Node itemNode = itemNodeList.item(itemitr);
                     Element eElement = (Element) itemNode;

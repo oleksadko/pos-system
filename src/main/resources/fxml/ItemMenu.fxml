@@ -31,7 +31,7 @@
    </center>
    <right>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <VBox prefHeight="429.0" prefWidth="200.0" style="-fx-border-color: red;" />
+         <VBox fx:id="receiptBox" prefHeight="429.0" prefWidth="200.0" style="-fx-border-color: red;" />
       </StackPane>
    </right>
    <bottom>
